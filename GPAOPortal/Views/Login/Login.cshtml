@@ -1,0 +1,35 @@
+﻿@model  GPAOPortal.Models.LoginModel
+@{
+    ViewBag.Title = "Login";
+    Layout = null;
+}
+
+<h2>User Information</h2>
+@using (Html.BeginForm())
+{
+<table>
+    <tr>
+        <td>Username :</td>
+        <td>@Html.TextBoxFor(m => m.Username)</td>
+    </tr>
+    <tr>
+        <td>Password :</td>
+        <td>@Html.PasswordFor(m => m.Password)</td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="Login" /></td>
+        <td>
+            @if(ViewBag.LoginFailed != null && ViewBag.LoginFailed == true)
+            {
+                <label id="lblMessage" style="color:red;">Login Failed</label>
+            }
+        </td>
+    </tr>
+</table>
+}
+
+<style>
+    .input-validation-error{
+        border:1px solid red;
+    }
+</style>

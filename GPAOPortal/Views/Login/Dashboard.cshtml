@@ -1,0 +1,53 @@
+﻿@model IEnumerable<GPAOPortal.Menus>
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Dashboard</title>
+</head>
+<body>
+    <div> 
+        <h2>Welcome to Dashboard</h2>
+    </div>
+
+    <table>
+        <tr>
+            <td>
+                <table>
+                    @if (Model != null)
+                    {
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.ActionLink(item.Name, item.Name.Replace(" ",""))
+                                </td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            First Menu First Menu First Menu First Menu First Menu
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label style="color:red; font-size:25px;">imed eddine benzarti</label> 
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
