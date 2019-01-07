@@ -32,13 +32,16 @@ body {
   font-weight: 400;
 }
 
-.form-signin .form-control {
-  position: relative;
-  box-sizing: border-box;
-  height: auto;
-  width:200px;
-  font-size: 16px;
-}
+    .form-signin .form-control {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        position: relative;
+        box-sizing: border-box;
+        height: auto;
+        width: 200px;
+        font-size: 16px;
+    }
   
     .form-signin .form-control:focus {
         z-index: 2;
@@ -57,3 +60,35 @@ body {
   border-top-right-radius: 0;
 }
 
+::-webkit-input-placeholder {
+    font-size: 14px;
+    color: #d0cdfa;
+    text-transform: uppercase;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+:-moz-placeholder { /* older Firefox*/
+    font-size: 14px;
+    color: #d0cdfa;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    font-size: 14px;
+    color: #d0cdfa;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+
+:-ms-input-placeholder {
+    font-size: 14px;
+    color: #d0cdfa;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
