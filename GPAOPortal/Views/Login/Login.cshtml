@@ -22,15 +22,15 @@
             <img class="mb-4" src="~/Resources/rnta.png" alt="" width="150" height="150">
             <h1 style="color:#B22222; font-weight:bold">GESTION DE PRODUCTION</h1>
 
-            <table align="center">
+            <table align="center" style="margin-top:100px;">
                 <tr>
-                    <td>@Html.TextBoxFor(m => m.Username, new { placeholder = "Username", @class = "form-control", autofocus = "autofocus", required = "required", style= "box-shadow: 10px 10px 10px #DCDCDC;" })</td>
+                    <td>@Html.TextBoxFor(m => m.Username, new { placeholder = "Username", @class = "form-control", autofocus = "autofocus", required = "required", style= "box-shadow: 10px 10px 10px #DCDCDC; margin-top:5px; height:60px;" })</td>
                 </tr>
                 <tr>
-                    <td>@Html.PasswordFor(m => m.Password, new { placeholder = "Password", @class = "form-control", autofocus = "autofocus", required = "required", style = "box-shadow: 10px 10px 10px #DCDCDC;" })</td>
+                    <td>@Html.PasswordFor(m => m.Password, new { placeholder = "Password", @class = "form-control", autofocus = "autofocus", required = "required", style = "box-shadow: 10px 10px 10px #DCDCDC; margin-top:5px; height:60px;" })</td>
                 </tr>
                 <tr>
-                    <td><input class="btn btn-lg btn-block" style="color:#B22222; background-color:white; border: groove; box-shadow: 10px 10px 10px #DCDCDC;  font-weight:bold" type="submit" value="Login" /></td>
+                    <td><input class="btn btn-lg btn-block" style="color:#B22222; background-color:white; border: groove; box-shadow: 10px 10px 10px #DCDCDC; margin-top:5px; font-weight:bold; width:800px; height:60px;" type="submit" value="Connexion" /></td>
                 </tr>
                 <tr>
                     <td>
@@ -42,7 +42,7 @@
                 </tr>
             </table>
         }
-            <div style="margin-top:300px; ">
+            <div style="margin-top:150px; ">
                 <p class="mt-5 mb-3 text-muted">La Régie Nationale des Tabacs et des Allumettes(RNTA) - &copy; 2018-2019</p>
             </div>    
     </div>
