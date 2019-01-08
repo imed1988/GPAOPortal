@@ -23,5 +23,7 @@ namespace GPAOPortal
         public Nullable<int> RoleID { get; set; }
     
         public virtual Roles Roles { get; set; }
+
+        
     }
 }
