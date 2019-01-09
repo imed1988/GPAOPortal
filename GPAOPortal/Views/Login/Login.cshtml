@@ -24,40 +24,37 @@
 
             <table align="center" style="margin-top:100px;">
                 <tr>
-                    <td>@Html.TextBoxFor(m => m.Username, new { placeholder = "Nom d'utilisateur", @class = "form-control", autofocus = "autofocus", required = "required", style = "box-shadow: 10px 10px 10px #DCDCDC; margin-top:5px; height:60px; color:#B22222;" })</td>
+                    <td>@Html.TextBoxFor(m => m.Username, new { placeholder = "Username", @class = "form-control", autofocus = "autofocus", required = "required", style= "box-shadow: 10px 10px 10px #DCDCDC; margin-top:5px; height:60px;" })</td>
                 </tr>
                 <tr>
-                    <td>@Html.PasswordFor(m => m.Password, new { placeholder = "Mot de Passe", @class = "form-control", autofocus = "autofocus", required = "required", style = "box-shadow: 10px 10px 10px #DCDCDC; margin-top:5px; height:60px; " })</td>
+                    <td>@Html.PasswordFor(m => m.Password, new { placeholder = "Password", @class = "form-control", autofocus = "autofocus", required = "required", style = "box-shadow: 10px 10px 10px #DCDCDC; margin-top:5px; height:60px;" })</td>
                 </tr>
                 <tr>
-                    <td><input class="btn btn-lg btn-block" id="btnSubmit" style="color:#B22222; background-color:white; border: groove; box-shadow: 10px 10px 10px #DCDCDC; margin-top:5px; font-weight:bold; width:800px; height:60px;" type="submit" value="Connexion" /></td>
+                    <td><input class="btn btn-lg btn-block" style="color:#B22222; background-color:white; border: groove; box-shadow: 10px 10px 10px #DCDCDC; margin-top:5px; font-weight:bold; width:800px; height:60px;" type="submit" value="Connexion" /></td>
                 </tr>
                 <tr>
                     <td>
                         @if (ViewBag.LoginFailed != null && ViewBag.LoginFailed == true)
                         {
-                            <div class="alert alert-danger">
-                                <strong>Erreur :</strong> Nom d'utilisateur ou mot passe incorrects.
-                                <a href="#">S'Inscrire</a>/<a href="#">Mot de passe oublié</a>
-                            </div>
-
-
+                            <label id="lblMessage" style="color:red;">Login Failed</label>
                         }
-
                     </td>
                 </tr>
             </table>
-
         }
-
+            <div style="margin-top:150px; ">
+                <p class="mt-5 mb-3 text-muted">La Régie Nationale des Tabacs et des Allumettes(RNTA) - &copy; 2018-2019</p>
+            </div>    
     </div>
-    
     <style>
         .input-validation-error {
             border: 1px solid red;
         }
+
+
     </style>
 
 
+    
 </body>
 </html>
