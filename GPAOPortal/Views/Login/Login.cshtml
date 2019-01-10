@@ -3,58 +3,33 @@
     ViewBag.Title = "Login";
     Layout = null;
 }
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" , initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" type="image/png" href="~/Resources/rnta.png" sizes="16x16">
-    <title>Login</title>
-    <link href="~/Resources/bootstrap.min.css" rel="stylesheet">
-    <link href="~/Resources/signin.css" rel="stylesheet">
-</head>
-<body class="text-center">
-    <div style="border-style:groove; box-shadow: 10px 10px 10px #DCDCDC; border-color: #696969; background-color:white; width:80%; height:80%">
-        @using (Html.BeginForm(new { @class = "form-signin" }))
-        {
-            <img class="mb-4" src="~/Resources/rnta.png" alt="" width="150" height="150">
-            <h1 style="color:#B22222; font-weight:bold">GESTION DE PRODUCTION</h1>
+<h2>User Information</h2>
+@using (Html.BeginForm())
+{
+<table>
+    <tr>
+        <td>Username :</td>
+        <td>@Html.TextBoxFor(m => m.Username)</td>
+    </tr>
+    <tr>
+        <td>Password :</td>
+        <td>@Html.PasswordFor(m => m.Password)</td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="Login" /></td>
+        <td>
+            @if(ViewBag.LoginFailed != null && ViewBag.LoginFailed == true)
+            {
+                <label id="lblMessage" style="color:red;">Login Failed</label>
+            }
+        </td>
+    </tr>
+</table>
+}
 
-            <table align="center" style="margin-top:100px;">
-                <tr>
-                    <td>@Html.TextBoxFor(m => m.Username, new { placeholder = "Username", @class = "form-control", autofocus = "autofocus", required = "required", style= "box-shadow: 10px 10px 10px #DCDCDC; margin-top:5px; height:60px;" })</td>
-                </tr>
-                <tr>
-                    <td>@Html.PasswordFor(m => m.Password, new { placeholder = "Password", @class = "form-control", autofocus = "autofocus", required = "required", style = "box-shadow: 10px 10px 10px #DCDCDC; margin-top:5px; height:60px;" })</td>
-                </tr>
-                <tr>
-                    <td><input class="btn btn-lg btn-block" style="color:#B22222; background-color:white; border: groove; box-shadow: 10px 10px 10px #DCDCDC; margin-top:5px; font-weight:bold; width:800px; height:60px;" type="submit" value="Connexion" /></td>
-                </tr>
-                <tr>
-                    <td>
-                        @if (ViewBag.LoginFailed != null && ViewBag.LoginFailed == true)
-                        {
-                            <label id="lblMessage" style="color:red;">Login Failed</label>
-                        }
-                    </td>
-                </tr>
-            </table>
-        }
-            <div style="margin-top:150px; ">
-                <p class="mt-5 mb-3 text-muted">La Régie Nationale des Tabacs et des Allumettes(RNTA) - &copy; 2018-2019</p>
-            </div>    
-    </div>
-    <style>
-        .input-validation-error {
-            border: 1px solid red;
-        }
-
-
-    </style>
-
-
-    
-</body>
-</html>
+<style>
+    .input-validation-error{
+        border:1px solid red;
+    }
+</style>
